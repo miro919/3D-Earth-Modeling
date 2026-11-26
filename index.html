@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Earth Modeling</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;}
+        canvas {background-color: black;}
+        button {margin: 5px;}
+    </style>
+</head>
+
+<body>
+    <h2>3D Earth Modeling</h2>
+    <canvas id="glCanvas" width="800" height="500">
+    </canvas>
+
+    <p id="coordinates">
+        위도: 0° / 경도: 0°
+    </p>
+
+    <div>
+        <button id="reverse">좌회전</button>
+        <button id="stop">정지</button>
+        <button id="forward">우회전</button>
+    </div>
+
+    <p>
+        광원 위치
+        <input type="range" id="lightAngle"
+               min="0" max="360" value="45">
+    </p>
+
+    <p>
+        <label>
+            <input type="checkbox" id="bumpMapping" checked>
+            범프 매핑 적용
+        </label>
+    </p>
+    <script src="main.js"></script>
+</body>
+</html>
