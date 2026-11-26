@@ -166,7 +166,7 @@ gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(indices),gl.STATIC_DRAW);
 // UV 좌표 버퍼 생성
 const uvBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, uvBuffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(uv),mgl.STATIC_DRAW);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(uv),gl.STATIC_DRAW);
 const uvLoc = gl.getAttribLocation(program, "aUV");
 
 gl.vertexAttribPointer(uvLoc, 2, gl.FLOAT, false, 0, 0);
